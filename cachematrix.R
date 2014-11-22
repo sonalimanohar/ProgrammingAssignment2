@@ -1,9 +1,13 @@
-makeCacheMatrix <- function(xsolve = matrix()) {
+makeCacheMatrix <- function(xsolve = matrix()) 
+{ ## Function which does the following:
+  ## -- Creates a matrix via the "set" function.
+
   inv <- NULL
-  set <- function(y) {
-    xsolve <<- y
-    inv <<- NULL
-  }
+  set <- function(y) 
+    {
+      xsolve <<- y
+      inv <<- NULL
+    }
   get <- function() xsolve
   setsolve <- function(solve) inv <<- solve
   getsolve <- function() inv
